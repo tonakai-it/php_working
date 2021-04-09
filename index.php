@@ -292,5 +292,39 @@ array_push($array,'ぶどう','なし'); // 追加
 // echo $unchi;
 // phpinfo()
 
+// タイプヒンティング
+function calc(int $num)
+{$num *= 3;
+  return $num;
+}
+echo calc(4).'<br>'; //12
+echo calc('5').'<br>'; //12
+// echo calc('hoge'); //エラー
+echo "5"* 3;
+
+function calc2(string $num): string
+{$num*=3;
+  return $num;
+}
+echo var_dump(calc2(4));
+
+// 可変引数
+function combine(string ...$name): string
+{
+  $combinedName = '';
+  for($i = 0; $i < count($name);$i++){
+    $combinedName .= $name[$i];
+  }
+  return $combinedName;
+}
+
+echo combine('田中','久保');
+
+// 親クラスから子クラスへの継承extends
+// オーバーライド 子クラスの方が優先される
+// 抽象クラス 子クラスにメソッドの設定を強制 abstract 親に記述 publicの普通のメソッドも可
+// interface abstractのみ
+// trait
+
 
 ?>
