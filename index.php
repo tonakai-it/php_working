@@ -324,7 +324,4 @@ echo combine('田中','久保');
 // オーバーライド 子クラスの方が優先される
 // 抽象クラス 子クラスにメソッドの設定を強制 abstract 親に記述 publicの普通のメソッドも可
 // interface abstractのみ
-// trait
-
-
 ?>
